@@ -502,3 +502,12 @@ HEADER -------------------- */
   border-radius: 50%;
   cursor: pointer;
 }
+
+.close-icon {
+  fill: currentColor;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--accent-color);
+}
