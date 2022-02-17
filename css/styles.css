@@ -178,6 +178,8 @@ ul .current {
 }
 .gallery-link {
   display: block;
+  text-decoration: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-link:hover,
 .gallery-link:focus {
@@ -212,6 +214,32 @@ ul .current {
   letter-spacing: 0.06em;
   color: #ffffff;
 }
+
+.work-description {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-description-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-link:hover .work-description,
+.gallery-link:focus .work-description {
+  transform: translateY(0);
+}
+
 .social-list {
   display: flex;
   justify-content: center;
