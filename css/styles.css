@@ -105,9 +105,22 @@ HEADER -------------------- */
   letter-spacing: 0.02em;
   color: #757575;
 }
-.nav-list-item > .current {
+ul .current {
   color: var(--accent-color);
+  position: relative;
 }
+
+.current:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .header-container {
   display: flex;
 }
@@ -287,10 +300,29 @@ HEADER -------------------- */
 .activity {
   padding-top: 0px;
 }
+
 .activity-img {
   margin-right: 0px;
 }
-.activity-title,
+.activity-item {
+  position: relative;
+}
+
+.activity-title {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.section-title,
 .team-title,
 .clients-title {
   display: block;
