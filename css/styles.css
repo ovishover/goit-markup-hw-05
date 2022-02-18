@@ -14,7 +14,7 @@
   --margin-text: 10px;
   --margin-calc: 30px;
   --attenuation-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-time: 2250ms;
+  --transition-time: 250ms;
 }
 .container {
   width: 1200px;
@@ -180,6 +180,9 @@ ul .current {
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
+  transition: color var(--transition-time) var(--attenuation-function),
+    background-color var(--transition-time) var(--attenuation-function),
+    box-shadow var(--transition-time) var(--attenuation-function);
 }
 .button:hover,
 .button:focus {
@@ -189,7 +192,7 @@ ul .current {
 .gallery-link {
   display: block;
   text-decoration: none;
-  transition: var(--transition-time) var(--attenuation-function);
+  transition: box-shadow var(--transition-time) var(--attenuation-function);
 }
 .gallery-link:hover,
 .gallery-link:focus {
@@ -268,13 +271,14 @@ ul .current {
   align-items: center;
   color: #afb1b8;
   border-radius: 50%;
+  transition: background-color var(--transition-time)
+      var(--attenuation-function),
+    color var(--transition-time) var(--attenuation-function);
 }
 
 .join .social-item-link {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--transition-time)
-    var(--attenuation-function);
 }
 
 .social-item-link:hover,
@@ -390,6 +394,8 @@ ul .current {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: color var(--transition-time) var(--attenuation-function),
+    border var(--transition-time) var(--attenuation-function);
 }
 .clients-item:not(:last-child) {
   padding-right: 30px;
