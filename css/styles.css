@@ -1,11 +1,20 @@
-/* -------------------- проверка границ -------------------- */ /* section { outline: 3px dotted rgb(43, 56, 231); }
-.container { outline: 2px solid tomato; } */ /* -------------------- BASIC RULES -------------------- */
+/* -------------------- проверка границ -------------------- */
+/* section {
+  outline: 3px dotted rgb(43, 56, 231);
+}
+.container {
+  outline: 2px solid tomato;
+} */
+
+/* -------------------- BASIC RULES -------------------- */
 :root {
   --accent-color: #2196f3;
   --text-color: #000000;
   --margin-img: 30px;
   --margin-text: 10px;
   --margin-calc: 30px;
+  --attenuation-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 2250ms;
 }
 .container {
   width: 1200px;
@@ -57,6 +66,7 @@ HEADER -------------------- */
   padding: 32px 0;
   align-items: center;
   display: flex;
+  transition: color var(--transition-time) var(--attenuation-function);
 }
 .link:hover,
 .link:focus {
@@ -227,7 +237,7 @@ ul .current {
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-time) var(--attenuation-function);
 }
 
 .work-description-block {
@@ -257,14 +267,16 @@ ul .current {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
-}
-.join .social-item-link {
-  color: #ffffff;
-}
-.social-icon-bgc {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
+
+.join .social-item-link {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-time)
+    var(--attenuation-function);
+}
+
 .social-item-link:hover,
 .social-item-link:focus {
   background-color: var(--accent-color);
@@ -493,11 +505,13 @@ ul .current {
 .footer-adress:not(:last-child) {
   margin-bottom: 9px;
 }
+
 .adress-map {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: color var(--transition-time) var(--attenuation-function);
 }
 .adress-footer {
   margin-top: 20px;
@@ -507,6 +521,7 @@ ul .current {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-time) var(--attenuation-function);
 }
 .footer-adress a:hover,
 .footer-adress a:focus {
